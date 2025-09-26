@@ -1,16 +1,30 @@
-# React + Vite
+# VS Code + Web Display – Code Analyzer 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A real-time **code analysis tool** that integrates with **VS Code** and displays results dynamically on a web interface. Instantly detect errors, warnings, and code patterns, making debugging and improvement faster and easier.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- Real-time code analysis inside **VS Code**
+- Web-based interface for displaying results
+- Supports multiple programming languages
+- Interactive and user-friendly UI
+- Roadmap to include AI-powered suggestions and advanced metrics
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React.js, HTML, CSS, JavaScript  
+- **Backend (optional):** Node.js  
+- **VS Code Integration:** VS Code Extension API  
+- **Web Display:** Dynamic web page showing analysis results
+
+---
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/ShadwFarid/U_project-Code-Analyzer-.git
