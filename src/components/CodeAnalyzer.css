@@ -1,0 +1,164 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.code-analyzer {
+  height: 100vh;   /* ياخد طول المتصفح كله */
+  width: 100vw;    /* ياخد عرض المتصفح كله */
+  background: #f7f7f7;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* يخلي العناصر تنزل تحت لو الشاشة ضيقة */
+}
+
+.header h1 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.header select {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 5px 10px;
+}
+
+/* ................................................................... */
+/* لو عايزه لقسمهم بالعرض  */
+.layout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 2/3 للكود - 1/3 للنتائج */
+  gap: 20px;
+  height: calc(100% - 60px); /* ناقص الهيدر */
+}
+
+/* موبايل/شاشات صغيرة → يتحول لعمود واحد */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr; /* صف واحد */
+    grid-template-rows: auto auto; /* الكود فوق والنتائج تحت */
+  }
+}
+/* لو عايزه لقسمهم بالطول   */
+.layout {
+  flex: 1; /* يملأ كل المساحة تحت الهيدر */
+  display: flex;
+  flex-direction: column; /* ترتيب عمودي */
+  /* height: calc(100vh - 80px); الطول كله ناقص الهيدر */
+}
+/* ................................................................... */
+.editor {
+  flex: 1; /* ياخد نصف المساحة */
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.editor textarea {
+  flex: 1; /* يملا المساحة */
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 14px;
+  resize: none; /* ممنوع المستخدم يغير الحجم */
+  box-sizing: border-box;
+  /* resize: vertical; */ /*  المستخدم يقدر يكبر/يصغر الـ textarea */
+}
+
+.editor button {
+  margin-top: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 20px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size:30px;
+  align-self: flex-start;
+  cursor: pointer;
+ width: 100%;
+  /*  في الموبايل ياخد العرض كله  */
+}
+
+
+
+.editor button:hover {
+  background: #1e4fc1;
+}
+
+.results {
+  flex: 1; /* ياخد النصف التاني */
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* لو النتائج كتير يطلع Scroll */
+}
+
+
+
+
+
+
+
+.results h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.results table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+
+.results table th,
+.results table td {
+  border: 1px solid #ddd;
+  padding: 6px 8px;
+  font-size: 13px;
+  text-align: left;
+}
+
+.results table thead {
+  background: #e5e7eb;
+} 
+
+
+
+
+
+/* لو الشاشة أصغر من 900px → عمود واحد */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.editor,
+.results {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+
